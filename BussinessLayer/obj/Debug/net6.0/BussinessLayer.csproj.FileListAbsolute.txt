@@ -1,0 +1,17 @@
+D:\MVC\MVC\EmployeeManagement\BussinessLayer\bin\Debug\net6.0\BussinessLayer.deps.json
+D:\MVC\MVC\EmployeeManagement\BussinessLayer\bin\Debug\net6.0\BussinessLayer.dll
+D:\MVC\MVC\EmployeeManagement\BussinessLayer\bin\Debug\net6.0\BussinessLayer.pdb
+D:\MVC\MVC\EmployeeManagement\BussinessLayer\bin\Debug\net6.0\ModelLayer.dll
+D:\MVC\MVC\EmployeeManagement\BussinessLayer\bin\Debug\net6.0\RepositoryLayer.dll
+D:\MVC\MVC\EmployeeManagement\BussinessLayer\bin\Debug\net6.0\ModelLayer.pdb
+D:\MVC\MVC\EmployeeManagement\BussinessLayer\bin\Debug\net6.0\RepositoryLayer.pdb
+D:\MVC\MVC\EmployeeManagement\BussinessLayer\obj\Debug\net6.0\BussinessLayer.csproj.AssemblyReference.cache
+D:\MVC\MVC\EmployeeManagement\BussinessLayer\obj\Debug\net6.0\BussinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\MVC\MVC\EmployeeManagement\BussinessLayer\obj\Debug\net6.0\BussinessLayer.AssemblyInfoInputs.cache
+D:\MVC\MVC\EmployeeManagement\BussinessLayer\obj\Debug\net6.0\BussinessLayer.AssemblyInfo.cs
+D:\MVC\MVC\EmployeeManagement\BussinessLayer\obj\Debug\net6.0\BussinessLayer.csproj.CoreCompileInputs.cache
+D:\MVC\MVC\EmployeeManagement\BussinessLayer\obj\Debug\net6.0\BussinessLayer.csproj.CopyComplete
+D:\MVC\MVC\EmployeeManagement\BussinessLayer\obj\Debug\net6.0\BussinessLayer.dll
+D:\MVC\MVC\EmployeeManagement\BussinessLayer\obj\Debug\net6.0\refint\BussinessLayer.dll
+D:\MVC\MVC\EmployeeManagement\BussinessLayer\obj\Debug\net6.0\BussinessLayer.pdb
+D:\MVC\MVC\EmployeeManagement\BussinessLayer\obj\Debug\net6.0\ref\BussinessLayer.dll

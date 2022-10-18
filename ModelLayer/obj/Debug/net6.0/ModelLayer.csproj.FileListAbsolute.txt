@@ -1,0 +1,12 @@
+D:\MVC\MVC\EmployeeManagement\ModelLayer\bin\Debug\net6.0\ModelLayer.deps.json
+D:\MVC\MVC\EmployeeManagement\ModelLayer\bin\Debug\net6.0\ModelLayer.dll
+D:\MVC\MVC\EmployeeManagement\ModelLayer\bin\Debug\net6.0\ModelLayer.pdb
+D:\MVC\MVC\EmployeeManagement\ModelLayer\obj\Debug\net6.0\ModelLayer.csproj.AssemblyReference.cache
+D:\MVC\MVC\EmployeeManagement\ModelLayer\obj\Debug\net6.0\ModelLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\MVC\MVC\EmployeeManagement\ModelLayer\obj\Debug\net6.0\ModelLayer.AssemblyInfoInputs.cache
+D:\MVC\MVC\EmployeeManagement\ModelLayer\obj\Debug\net6.0\ModelLayer.AssemblyInfo.cs
+D:\MVC\MVC\EmployeeManagement\ModelLayer\obj\Debug\net6.0\ModelLayer.csproj.CoreCompileInputs.cache
+D:\MVC\MVC\EmployeeManagement\ModelLayer\obj\Debug\net6.0\ModelLayer.dll
+D:\MVC\MVC\EmployeeManagement\ModelLayer\obj\Debug\net6.0\refint\ModelLayer.dll
+D:\MVC\MVC\EmployeeManagement\ModelLayer\obj\Debug\net6.0\ModelLayer.pdb
+D:\MVC\MVC\EmployeeManagement\ModelLayer\obj\Debug\net6.0\ref\ModelLayer.dll

@@ -1,0 +1,15 @@
+D:\MVC\MVC\EmployeeManagement\RepositoryLayer\bin\Debug\net6.0\RepositoryLayer.deps.json
+D:\MVC\MVC\EmployeeManagement\RepositoryLayer\bin\Debug\net6.0\RepositoryLayer.dll
+D:\MVC\MVC\EmployeeManagement\RepositoryLayer\bin\Debug\net6.0\RepositoryLayer.pdb
+D:\MVC\MVC\EmployeeManagement\RepositoryLayer\bin\Debug\net6.0\ModelLayer.dll
+D:\MVC\MVC\EmployeeManagement\RepositoryLayer\bin\Debug\net6.0\ModelLayer.pdb
+D:\MVC\MVC\EmployeeManagement\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.csproj.AssemblyReference.cache
+D:\MVC\MVC\EmployeeManagement\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\MVC\MVC\EmployeeManagement\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.AssemblyInfoInputs.cache
+D:\MVC\MVC\EmployeeManagement\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.AssemblyInfo.cs
+D:\MVC\MVC\EmployeeManagement\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.csproj.CoreCompileInputs.cache
+D:\MVC\MVC\EmployeeManagement\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.csproj.CopyComplete
+D:\MVC\MVC\EmployeeManagement\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.dll
+D:\MVC\MVC\EmployeeManagement\RepositoryLayer\obj\Debug\net6.0\refint\RepositoryLayer.dll
+D:\MVC\MVC\EmployeeManagement\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.pdb
+D:\MVC\MVC\EmployeeManagement\RepositoryLayer\obj\Debug\net6.0\ref\RepositoryLayer.dll

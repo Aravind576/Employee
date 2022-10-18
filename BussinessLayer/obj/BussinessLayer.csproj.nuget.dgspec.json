@@ -1,0 +1,198 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\MVC\\MVC\\EmployeeManagement\\BussinessLayer\\BussinessLayer.csproj": {}
+  },
+  "projects": {
+    "D:\\MVC\\MVC\\EmployeeManagement\\BussinessLayer\\BussinessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\MVC\\MVC\\EmployeeManagement\\BussinessLayer\\BussinessLayer.csproj",
+        "projectName": "BussinessLayer",
+        "projectPath": "D:\\MVC\\MVC\\EmployeeManagement\\BussinessLayer\\BussinessLayer.csproj",
+        "packagesPath": "C:\\Users\\anarayanan\\.nuget\\packages\\",
+        "outputPath": "D:\\MVC\\MVC\\EmployeeManagement\\BussinessLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\anarayanan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\MVC\\MVC\\EmployeeManagement\\ModelLayer\\ModelLayer.csproj": {
+                "projectPath": "D:\\MVC\\MVC\\EmployeeManagement\\ModelLayer\\ModelLayer.csproj"
+              },
+              "D:\\MVC\\MVC\\EmployeeManagement\\RepositoryLayer\\RepositoryLayer.csproj": {
+                "projectPath": "D:\\MVC\\MVC\\EmployeeManagement\\RepositoryLayer\\RepositoryLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\MVC\\MVC\\EmployeeManagement\\ModelLayer\\ModelLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\MVC\\MVC\\EmployeeManagement\\ModelLayer\\ModelLayer.csproj",
+        "projectName": "ModelLayer",
+        "projectPath": "D:\\MVC\\MVC\\EmployeeManagement\\ModelLayer\\ModelLayer.csproj",
+        "packagesPath": "C:\\Users\\anarayanan\\.nuget\\packages\\",
+        "outputPath": "D:\\MVC\\MVC\\EmployeeManagement\\ModelLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\anarayanan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\MVC\\MVC\\EmployeeManagement\\RepositoryLayer\\RepositoryLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\MVC\\MVC\\EmployeeManagement\\RepositoryLayer\\RepositoryLayer.csproj",
+        "projectName": "RepositoryLayer",
+        "projectPath": "D:\\MVC\\MVC\\EmployeeManagement\\RepositoryLayer\\RepositoryLayer.csproj",
+        "packagesPath": "C:\\Users\\anarayanan\\.nuget\\packages\\",
+        "outputPath": "D:\\MVC\\MVC\\EmployeeManagement\\RepositoryLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\anarayanan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\MVC\\MVC\\EmployeeManagement\\ModelLayer\\ModelLayer.csproj": {
+                "projectPath": "D:\\MVC\\MVC\\EmployeeManagement\\ModelLayer\\ModelLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
