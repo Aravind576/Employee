@@ -11,6 +11,8 @@ namespace BussinessLayer
     {
         List<EmployeeDetail> Get();
         EmployeeDetail Get(String username);
+        void delete(String username);
+        void create(EmployeeDetail employee);
 
     }
 }

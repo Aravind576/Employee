@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement", "EmployeeManagement\EmployeeManagement.csproj", "{DAFF6550-2024-4F2C-9A5C-8D689BA5181C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagement", "EmployeeManagement\EmployeeManagement.csproj", "{DAFF6550-2024-4F2C-9A5C-8D689BA5181C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelLayer", "ModelLayer\ModelLayer.csproj", "{94711BBA-CE2A-48EE-B21F-ACF3B7C726B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModelLayer", "ModelLayer\ModelLayer.csproj", "{94711BBA-CE2A-48EE-B21F-ACF3B7C726B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BussinessLayer", "BussinessLayer\BussinessLayer.csproj", "{44E56E7C-7485-4E15-A449-AAAD5F3E48F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BussinessLayer", "BussinessLayer\BussinessLayer.csproj", "{44E56E7C-7485-4E15-A449-AAAD5F3E48F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryLayer", "RepositoryLayer\RepositoryLayer.csproj", "{760B2A91-ED1C-4EB6-ACA9-DE732B2B7CFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryLayer", "RepositoryLayer\RepositoryLayer.csproj", "{760B2A91-ED1C-4EB6-ACA9-DE732B2B7CFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIUXLayer", "UIUXLayer\UIUXLayer.csproj", "{E0980156-164D-40D8-A434-893D63F7E030}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{760B2A91-ED1C-4EB6-ACA9-DE732B2B7CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{760B2A91-ED1C-4EB6-ACA9-DE732B2B7CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{760B2A91-ED1C-4EB6-ACA9-DE732B2B7CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0980156-164D-40D8-A434-893D63F7E030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0980156-164D-40D8-A434-893D63F7E030}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0980156-164D-40D8-A434-893D63F7E030}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0980156-164D-40D8-A434-893D63F7E030}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

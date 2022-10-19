@@ -26,6 +26,24 @@ namespace EmployeeManagement.Controllers
         {
             return _dataBaseHandler.Get(username);
         }
-
+        [HttpDelete]
+        [Route("delete/{username}")]
+        
+        public ActionResult Delete(string username)
+        {
+            _dataBaseHandler.delete(username);
+            return Ok();  
+        }
+        [HttpPost]
+        [Route("create")]
+        public IActionResult Create([FromBody]EmployeeDetail employeeDetail)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest("not a valid request");
+            _dataBaseHandler.create(employeeDetail);
+            return Ok();
+        }
+        
+        
     }
 }

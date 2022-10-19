@@ -26,5 +26,19 @@ namespace BussinessLayer
         {
             return _employeeContext.employee.ToList();
         }
+        public void delete(string username)
+        {
+            EmployeeDetail emp= _employeeContext.employee.FirstOrDefault(i =>i.Username==username);
+            if(emp!=null)
+            {
+                _employeeContext.Remove(emp);
+                _employeeContext.SaveChanges();
+            }
+        }
+         public void create(EmployeeDetail employee)
+        {
+            _employeeContext.employee.Add(employee);
+            _employeeContext.SaveChanges();
+        }
     }
 }
