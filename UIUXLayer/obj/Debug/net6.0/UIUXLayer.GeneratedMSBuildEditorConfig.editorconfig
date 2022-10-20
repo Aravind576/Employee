@@ -15,12 +15,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\MVC\MVC\EmployeeManagement\UIUXLayer
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/MVC/MVC/EmployeeManagement/UIUXLayer/Views/Employee/create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcY3JlYXRlLmNzaHRtbA==
+[D:/MVC/MVC/EmployeeManagement/UIUXLayer/Views/Employee/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MVC/MVC/EmployeeManagement/UIUXLayer/Views/Employee/DashBoard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGFzaEJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/MVC/MVC/EmployeeManagement/UIUXLayer/Views/Employee/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MVC/MVC/EmployeeManagement/UIUXLayer/Views/Employee/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MVC/MVC/EmployeeManagement/UIUXLayer/Views/Employee/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/MVC/MVC/EmployeeManagement/UIUXLayer/Views/Employee/viewEmployee.cshtml]

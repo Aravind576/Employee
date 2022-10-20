@@ -19,7 +19,7 @@ namespace BussinessLayer
         }
         public EmployeeDetail Get(string username)
         {
-            return _employeeContext.employee.FirstOrDefault(i => i.Username==username);
+            return _employeeContext.employee.FirstOrDefault(i => i.username==username);
         }
 
         public List<EmployeeDetail> Get()
@@ -28,7 +28,7 @@ namespace BussinessLayer
         }
         public void delete(string username)
         {
-            EmployeeDetail emp= _employeeContext.employee.FirstOrDefault(i =>i.Username==username);
+            EmployeeDetail emp= _employeeContext.employee.FirstOrDefault(i =>i.username==username);
             if(emp!=null)
             {
                 _employeeContext.Remove(emp);

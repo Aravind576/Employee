@@ -62,7 +62,39 @@ namespace UIUXLayer.Controllers
             client.BaseAddress = new Uri("https://localhost:7015");
             await client.DeleteAsync($"api/employee/delete/{username}");
             return RedirectToAction("ViewEmployee");
-            //
+            
+        }
+        
+        public IActionResult Login(UserLoginClass user)
+        {
+            var client = new HttpClient();
+            client.BaseAddress = new Uri("https://localhost:7015");
+            var postTask = client.PostAsJsonAsync<UserLoginClass>("api/user/login", user);
+            postTask.Wait();
+            var Result = postTask.Result;
+            if (Result.IsSuccessStatusCode)
+            {
+                return RedirectToAction("ViewEmployee");
+            }
+            return View();
+        }
+        
+        public IActionResult Register(UserRegister user)
+        {
+            var client = new HttpClient();
+            client.BaseAddress = new Uri("https://localhost:7015");
+            var postTask = client.PostAsJsonAsync<UserRegister>("api/user/Register", user);
+            postTask.Wait();
+            var Result = postTask.Result;
+            if (Result.IsSuccessStatusCode)
+            {
+                return RedirectToAction("ViewEmployee");
+            }
+            return View();
+        }
+        public ActionResult DashBoard()
+        {
+            return View();
         }
     }
 }
