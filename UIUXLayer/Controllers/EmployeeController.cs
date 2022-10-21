@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using System.Net.Http.Json;
 using UIUXLayer.Models;
-
+using UIUXLayer.Services;
 
 namespace UIUXLayer.Controllers
 {
@@ -99,14 +99,16 @@ namespace UIUXLayer.Controllers
         }
         public async Task<IActionResult> Update(string username)
         {
+            
             var client = new HttpClient();
             client.BaseAddress = new Uri("https://localhost:7015");
-            TempModelClass? employee = new TempModelClass();
-
+            TempModelClass employee = new TempModelClass();
             HttpResponseMessage res = await client.GetAsync($"api/Employee/get/{username}");
             if (res.IsSuccessStatusCode)
             {
                 var result = res.Content.ReadAsStringAsync().Result;
+                
+                 
                 employee = JsonConvert.DeserializeObject<TempModelClass>(result);
             }
             
