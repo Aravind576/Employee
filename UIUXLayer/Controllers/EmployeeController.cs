@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Net.Http.Json;
 using UIUXLayer.Models;
 
 
@@ -74,7 +75,7 @@ namespace UIUXLayer.Controllers
             var Result = postTask.Result;
             if (Result.IsSuccessStatusCode)
             {
-                return RedirectToAction("ViewEmployee");
+                return RedirectToAction("DashBoard");
             }
             return View();
         }
@@ -88,7 +89,7 @@ namespace UIUXLayer.Controllers
             var Result = postTask.Result;
             if (Result.IsSuccessStatusCode)
             {
-                return RedirectToAction("ViewEmployee");
+                return RedirectToAction("login");
             }
             return View();
         }
@@ -96,5 +97,56 @@ namespace UIUXLayer.Controllers
         {
             return View();
         }
+        public async Task<IActionResult> Update(string username)
+        {
+            var client = new HttpClient();
+            client.BaseAddress = new Uri("https://localhost:7015");
+            TempModelClass? employee = new TempModelClass();
+
+            HttpResponseMessage res = await client.GetAsync($"api/Employee/get/{username}");
+            if (res.IsSuccessStatusCode)
+            {
+                var result = res.Content.ReadAsStringAsync().Result;
+                employee = JsonConvert.DeserializeObject<TempModelClass>(result);
+            }
+            
+            
+            return View(employee);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Update(TempModelClass temp)
+        {
+            var client = new HttpClient();
+            client.BaseAddress = new Uri("https://localhost:7015");
+            var postTask = client.PostAsJsonAsync<TempModelClass>("api/Employee/Update", temp);
+            postTask.Wait();
+            var Result = postTask.Result;
+            if (Result.IsSuccessStatusCode)
+            {
+                return RedirectToAction("viewEmployee");
+            }
+            return View();
+        }
+        public ActionResult designation()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> designation(DesignationClass designationClass)
+        {
+            var client = new HttpClient();
+            client.BaseAddress = new Uri("https://localhost:7015");
+            var postTask = client.PostAsJsonAsync<DesignationClass>("api/Designation/designation", designationClass);
+
+          /*  var postTask = client.PostAsJsonAsync<DesignationClass>("api/Designation/Designation", designationClass)*/
+            postTask.Wait();
+            var Result = postTask.Result;
+            if (Result.IsSuccessStatusCode)
+            {
+                return RedirectToAction("DashBoard");
+            }
+            return View();
+        }
+        
     }
 }

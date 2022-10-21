@@ -40,6 +40,16 @@ namespace RepositoryLayer.Migrations
                     b.ToTable("accountDetails");
                 });
 
+            modelBuilder.Entity("ModelLayer.Designation", b =>
+                {
+                    b.Property<string>("DesignationTypes")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("DesignationTypes");
+
+                    b.ToTable("designations");
+                });
+
             modelBuilder.Entity("ModelLayer.EmployeeDetail", b =>
                 {
                     b.Property<string>("username")

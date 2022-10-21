@@ -88,7 +88,8 @@
             </td>
             <td>
                 @Html.ActionLink("Details", "Details", new {  username=item.username }) |
-                @Html.ActionLink("Delete", "Delete", new {  username=item.username  })
+                @Html.ActionLink("Delete", "Delete", new {  username=item.username  })|
+                    @Html.ActionLink("Edit", "Update", new {  username=item.username  })
             </td>
         </tr>
 }

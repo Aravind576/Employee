@@ -40,5 +40,16 @@ namespace BussinessLayer
             _employeeContext.employee.Add(employee);
             _employeeContext.SaveChanges();
         }
+        public void Edit(EmployeeDetail employee)
+        {
+            EmployeeDetail emp = _employeeContext.employee.FirstOrDefault(i => i.username == employee.username);
+            if (emp != null)
+            {
+                _employeeContext.Remove(emp);
+                _employeeContext.employee.Add(employee);
+                _employeeContext.SaveChanges();
+            }
+            
+        }
     }
 }

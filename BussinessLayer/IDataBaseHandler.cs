@@ -13,7 +13,7 @@ namespace BussinessLayer
         EmployeeDetail Get(String username);
         void delete(String username);
         void create(EmployeeDetail employee);
-       
+       void Edit(EmployeeDetail employee);
 
     }
 }

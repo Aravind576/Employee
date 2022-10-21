@@ -43,7 +43,15 @@ namespace EmployeeManagement.Controllers
             _dataBaseHandler.create(employeeDetail);
             return Ok();
         }
-        
+        [HttpPost]
+        [Route("Update")]
+        public IActionResult Update([FromBody]EmployeeDetail employeeDetail)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest("not a valid request");
+            _dataBaseHandler.Edit(employeeDetail);
+            return Ok();
+        }
         
     }
 }
