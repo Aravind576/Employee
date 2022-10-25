@@ -12,8 +12,8 @@ using RepositoryLayer;
 namespace RepositoryLayer.Migrations
 {
     [DbContext(typeof(EmployeeContext))]
-    [Migration("20221021062841_Migrationfour")]
-    partial class Migrationfour
+    [Migration("20221025151014_Migrationnine")]
+    partial class Migrationnine
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -44,10 +44,14 @@ namespace RepositoryLayer.Migrations
 
             modelBuilder.Entity("ModelLayer.Designation", b =>
                 {
-                    b.Property<string>("DesignationTypes")
+                    b.Property<string>("ID")
                         .HasColumnType("nvarchar(450)");
 
-                    b.HasKey("DesignationTypes");
+                    b.Property<string>("DesignationTypes")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
 
                     b.ToTable("designations");
                 });

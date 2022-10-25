@@ -42,10 +42,14 @@ namespace RepositoryLayer.Migrations
 
             modelBuilder.Entity("ModelLayer.Designation", b =>
                 {
-                    b.Property<string>("DesignationTypes")
+                    b.Property<string>("ID")
                         .HasColumnType("nvarchar(450)");
 
-                    b.HasKey("DesignationTypes");
+                    b.Property<string>("DesignationTypes")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
 
                     b.ToTable("designations");
                 });

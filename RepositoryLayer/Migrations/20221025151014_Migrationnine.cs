@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace RepositoryLayer.Migrations
 {
-    public partial class Migrationfour : Migration
+    public partial class Migrationnine : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -26,11 +26,12 @@ namespace RepositoryLayer.Migrations
                 name: "designations",
                 columns: table => new
                 {
-                    DesignationTypes = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    ID = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    DesignationTypes = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_designations", x => x.DesignationTypes);
+                    table.PrimaryKey("PK_designations", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(

@@ -58,5 +58,7 @@ namespace UIUXLayer.Models
         public string? designation { get; set; }
 
         public string? imagePath { get; set; }
+        
+        
     }
 }

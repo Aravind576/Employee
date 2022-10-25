@@ -11,5 +11,6 @@ namespace RepositoryLayer
         public DbSet<EmployeeDetail> employee { get; set; }
         public DbSet<AccountDetails> accountDetails { get; set; }
         public DbSet<Designation> designations { get; set; }
+
     }
 }

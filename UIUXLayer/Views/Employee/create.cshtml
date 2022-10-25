@@ -1,17 +1,17 @@
 ﻿@model UIUXLayer.Models.ModelClass
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "create";
 }
 
-<h1>Create</h1>
+<h1>create</h1>
 
 <h4>ModelClass</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form asp-action="create">
+             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="title" class="control-label">Title</label>
                 <label asp-for="title" class="control-label">Mr.</label>
@@ -316,12 +316,12 @@
                     <option value="Zambia">Zambia</option>
                     <option value="Zimbabwe">Zimbabwe</option>
                 </select>
-            
-                
+
+
                 <span asp-validation-for="country" class="text-danger"></span>
             </div>
-            
-                
+
+
             <div class="form-group">
                 <label asp-for="Salary" class="control-label">Salary</label>
                 <input asp-for="Salary" class="form-control" />
@@ -333,18 +333,25 @@
 
             <div class="form-group">
                 <label asp-for="designation" class="control-label">Designation</label>
-                <input asp-for="designation" class="form-control" />
-                <span asp-validation-for="designation" class="text-danger"></span>
+                <select asp-for="designation" class="form-select">
+
+                    @foreach (var item in ViewData["designationtemp"] as IList<DesignationClass>)
+                    {
+                                    <option value="@item.DesignationTypes">@item.DesignationTypes</option>
+                    }
+                </select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
+
+
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="ViewEmployee">Back to List</a>
+    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

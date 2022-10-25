@@ -15,8 +15,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\MVC\MVC\EmployeeManagement\UIUXLayer
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/MVC/MVC/EmployeeManagement/UIUXLayer/Views/Employee/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
+[D:/MVC/MVC/EmployeeManagement/UIUXLayer/Views/Employee/create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcY3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/MVC/MVC/EmployeeManagement/UIUXLayer/Views/Employee/DashBoard.cshtml]

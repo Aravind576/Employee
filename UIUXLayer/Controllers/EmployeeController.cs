@@ -2,8 +2,6 @@
 using Newtonsoft.Json;
 using System.Net.Http.Json;
 using UIUXLayer.Models;
-using UIUXLayer.Services;
-
 namespace UIUXLayer.Controllers
 {
     public class EmployeeController : Controller
@@ -39,16 +37,31 @@ namespace UIUXLayer.Controllers
             return View(employee);
 
         }
-        public ActionResult create()
+        public async Task<ActionResult> create()
         {
+            var client = new HttpClient();
+            client.BaseAddress = new Uri("https://localhost:7015");
+            List<DesignationClass>? designationTemp = new List<DesignationClass>();
+
+            HttpResponseMessage res = await client.GetAsync("api/Designation");
+            
+            if (res.IsSuccessStatusCode)
+            {
+                var result = res.Content.ReadAsStringAsync().Result;
+                designationTemp = JsonConvert.DeserializeObject<List<DesignationClass>>(result);
+                ViewData["designationtemp"] = designationTemp;
+            }
             return View();
         }
         [HttpPost]
         public IActionResult create(ModelClass emp)
         {
+
             var client = new HttpClient();
             client.BaseAddress = new Uri("https://localhost:7015");
+            
             var postTask = client.PostAsJsonAsync<ModelClass>("api/Employee/create", emp);
+           
             postTask.Wait();
             var Result = postTask.Result;
             if(Result.IsSuccessStatusCode)
@@ -99,16 +112,24 @@ namespace UIUXLayer.Controllers
         }
         public async Task<IActionResult> Update(string username)
         {
-            
             var client = new HttpClient();
             client.BaseAddress = new Uri("https://localhost:7015");
+            List<DesignationClass>? designationTemp = new List<DesignationClass>();
+
+            HttpResponseMessage des = await client.GetAsync("api/Designation");
+
+            if (des.IsSuccessStatusCode)
+            {
+                var result = des.Content.ReadAsStringAsync().Result;
+                designationTemp = JsonConvert.DeserializeObject<List<DesignationClass>>(result);
+                ViewData["designationtemp"] = designationTemp;
+            }
+           
             TempModelClass employee = new TempModelClass();
             HttpResponseMessage res = await client.GetAsync($"api/Employee/get/{username}");
             if (res.IsSuccessStatusCode)
             {
                 var result = res.Content.ReadAsStringAsync().Result;
-                
-                 
                 employee = JsonConvert.DeserializeObject<TempModelClass>(result);
             }
             
@@ -149,6 +170,22 @@ namespace UIUXLayer.Controllers
             }
             return View();
         }
-        
+        public async Task<IActionResult> ViewDesignation()
+        {
+            var client = new HttpClient();
+            client.BaseAddress = new Uri("https://localhost:7015");
+            List<ModelClass>? employee = new List<ModelClass>();
+
+            HttpResponseMessage res = await client.GetAsync("api/designation/get");
+            if (res.IsSuccessStatusCode)
+            {
+                var result = res.Content.ReadAsStringAsync().Result;
+                employee = JsonConvert.DeserializeObject<List<ModelClass>>(result);
+            }
+            return View(employee);
+
+        }
+
+
     }
 }

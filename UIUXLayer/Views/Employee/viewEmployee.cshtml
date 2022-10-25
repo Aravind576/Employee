@@ -27,7 +27,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.username)
             </th>
-            
+          
             <th>
                 @Html.DisplayNameFor(model => model.emailId)
             </th>
@@ -45,6 +45,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.designation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.imagePath)
             </th>
             <th></th>
         </tr>
@@ -87,9 +90,12 @@
                 @Html.DisplayFor(modelItem => item.designation)
             </td>
             <td>
-                @Html.ActionLink("Details", "Details", new {  username=item.username }) |
-                @Html.ActionLink("Delete", "Delete", new {  username=item.username  })|
-                    @Html.ActionLink("Edit", "Update", new {  username=item.username  })
+                @Html.DisplayFor(modelItem => item.imagePath)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Update", new { username=item.username }) |
+                    @Html.ActionLink("Details", "Details", new { username=item.username  }) |
+                    @Html.ActionLink("Delete", "Delete", new { username=item.username  })
             </td>
         </tr>
 }

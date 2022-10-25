@@ -1,3 +1,11 @@
+D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\UIUXLayer.csproj.AssemblyReference.cache
+D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\UIUXLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\UIUXLayer.AssemblyInfoInputs.cache
+D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\UIUXLayer.AssemblyInfo.cs
+D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\UIUXLayer.csproj.CoreCompileInputs.cache
+D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\UIUXLayer.MvcApplicationPartsAssemblyInfo.cache
+D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\UIUXLayer.RazorAssemblyInfo.cache
+D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\UIUXLayer.RazorAssemblyInfo.cs
 D:\MVC\MVC\EmployeeManagement\UIUXLayer\bin\Debug\net6.0\appsettings.Development.json
 D:\MVC\MVC\EmployeeManagement\UIUXLayer\bin\Debug\net6.0\appsettings.json
 D:\MVC\MVC\EmployeeManagement\UIUXLayer\bin\Debug\net6.0\UIUXLayer.staticwebassets.runtime.json
@@ -220,14 +228,6 @@ D:\MVC\MVC\EmployeeManagement\UIUXLayer\bin\Debug\net6.0\runtimes\unix\lib\net6.
 D:\MVC\MVC\EmployeeManagement\UIUXLayer\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\MVC\MVC\EmployeeManagement\UIUXLayer\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\MVC\MVC\EmployeeManagement\UIUXLayer\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\UIUXLayer.csproj.AssemblyReference.cache
-D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\UIUXLayer.GeneratedMSBuildEditorConfig.editorconfig
-D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\UIUXLayer.AssemblyInfoInputs.cache
-D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\UIUXLayer.AssemblyInfo.cs
-D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\UIUXLayer.csproj.CoreCompileInputs.cache
-D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\UIUXLayer.MvcApplicationPartsAssemblyInfo.cache
-D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\UIUXLayer.RazorAssemblyInfo.cache
-D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\UIUXLayer.RazorAssemblyInfo.cs
 D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\staticwebassets.build.json
 D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\staticwebassets.development.json
 D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css

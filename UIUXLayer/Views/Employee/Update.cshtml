@@ -1,6 +1,13 @@
 ﻿@model UIUXLayer.Models.TempModelClass
+
 @{
+    ViewData["Title"] = "Update";
 }
+
+<h1>Update</h1>
+
+<h4>TempModelClass</h4>
+<hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Update">
@@ -10,7 +17,7 @@
                 <label asp-for="title" class="control-label">Mr.</label>
                 <input asp-for="title" class="form-check-input" type="radio" value="Mr" />
                 <label asp-for="title" class="control-label">Mrs.</label>
-                <input asp-for="title" class="form-check-input" type="radio" value="Mrs"/>
+                <input asp-for="title" class="form-check-input" type="radio" value="Mrs" />
                 <label asp-for="title" class="control-label">Ms.</label>
                 <input asp-for="title" class="form-check-input" type="radio" value="Ms" />
                 <span asp-validation-for="title" class="text-danger"></span>
@@ -29,22 +36,18 @@
                 <label asp-for="gender" class="control-label">Gender</label>
                 <label asp-for="gender" class="form-check-label">Male</label>
                 <input type="radio" asp-for="gender" class="form-check-input" value="Male" />
-                <label asp-for="gender" class="form-check-label" >Female</label>
-                <input type="radio" asp-for="gender" class="form-check-input" value="Female"/>
+                <label asp-for="gender" class="form-check-label">Female</label>
+                <input type="radio" asp-for="gender" class="form-check-input" value="Female" />
                 <label asp-for="gender" class="form-check-label">Custom</label>
                 <input type="radio" asp-for="gender" class="form-check-input" value="Custom" />
                 <span asp-validation-for="gender" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="username" class="control-label">Username</label>
-                <input asp-for="username" class="form-control" readonly />
+                <input asp-for="username" class="form-control" readonly/>
                 <span asp-validation-for="username" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="password" class="control-label">Password</label>
-                <input asp-for="password" type="password" class="form-control" />
-                <span asp-validation-for="password" class="text-danger"></span>
-            </div>
+            
             <div class="form-group">
                 <label asp-for="emailId" class="control-label">Email</label>
                 <input asp-for="emailId" class="form-control" />
@@ -57,7 +60,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="address" class="control-label">Address</label>
-                <textarea asp-for="address" class="form-control rounded-0" rows="3"  ></textarea>
+                <textarea asp-for="address" class="form-control rounded-0" rows="3"></textarea>
                 <span asp-validation-for="address" class="text-danger"></span>
             </div>
 
@@ -313,19 +316,39 @@
 
                 <span asp-validation-for="country" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="Salary" class="control-label">Salary</label>
                 <input asp-for="Salary" class="form-control" />
                 <span asp-validation-for="Salary" class="text-danger"></span>
             </div>
+
+
+
+
             <div class="form-group">
-                <label asp-for="designation" class="control-label">Deignation</label>
-                <input asp-for="designation" class="form-control" />
-                <span asp-validation-for="designation" class="text-danger"></span>
+                <label asp-for="designation" class="control-label">Designation</label>
+                <select asp-for="designation" class="form-select">
+
+                    @foreach (var item in ViewData["designationtemp"] as IList<DesignationClass>)
+                    {
+                        <option value="@item.DesignationTypes">@item.DesignationTypes</option>
+                    }
+                </select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Update" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
+
         </form>
     </div>
 </div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

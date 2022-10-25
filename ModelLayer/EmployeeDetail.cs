@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ModelLayer
 {
@@ -60,10 +61,12 @@ namespace ModelLayer
         public string? designation { get; set; }
 
         public string? imagePath { get; set; }
+
         
+
         
-        
-        
+
+
 
     }
 }
