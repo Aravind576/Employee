@@ -9,66 +9,86 @@ namespace UIUXLayer.Controllers
         
         public async Task<IActionResult> viewEmployee()
         {
-            var client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:7015");
-            List<ModelClass>? employee = new List<ModelClass>();
-            
-            HttpResponseMessage res = await client.GetAsync("api/Employee");
-            if (res.IsSuccessStatusCode)
+            if (HttpContext.Session.GetString("tokens") != null)
             {
-                var result = res.Content.ReadAsStringAsync().Result;
-                employee = JsonConvert.DeserializeObject<List<ModelClass>>(result);
+                var client = new HttpClient();
+                client.BaseAddress = new Uri("https://localhost:7015");
+                List<ModelClass>? employee = new List<ModelClass>();
+
+                HttpResponseMessage res = await client.GetAsync("api/Employee");
+                if (res.IsSuccessStatusCode)
+                {
+                    var result = res.Content.ReadAsStringAsync().Result;
+                    employee = JsonConvert.DeserializeObject<List<ModelClass>>(result);
+                }
+                return View(employee);
             }
-            return View(employee);
+            return RedirectToAction("login");
+           
 
         }
         public async Task<IActionResult> Details(string username)
         {
-            var client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:7015");
-            ModelClass? employee = new ModelClass();
-
-            HttpResponseMessage res = await client.GetAsync($"api/Employee/get/{username}");
-            if (res.IsSuccessStatusCode)
+            if (HttpContext.Session.GetString("tokens") != null)
             {
-                var result = res.Content.ReadAsStringAsync().Result;
-                employee = JsonConvert.DeserializeObject<ModelClass>(result);
+                var client = new HttpClient();
+                client.BaseAddress = new Uri("https://localhost:7015");
+                ModelClass? employee = new ModelClass();
+
+                HttpResponseMessage res = await client.GetAsync($"api/Employee/get/{username}");
+                if (res.IsSuccessStatusCode)
+                {
+                    var result = res.Content.ReadAsStringAsync().Result;
+                    employee = JsonConvert.DeserializeObject<ModelClass>(result);
+                }
+                return View(employee);
             }
-            return View(employee);
+            return RedirectToAction("login");
+            
+            
 
         }
         public async Task<ActionResult> create()
         {
-            var client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:7015");
-            List<DesignationClass>? designationTemp = new List<DesignationClass>();
-
-            HttpResponseMessage res = await client.GetAsync("api/Designation");
-            
-            if (res.IsSuccessStatusCode)
+            if (HttpContext.Session.GetString("tokens") != null)
             {
-                var result = res.Content.ReadAsStringAsync().Result;
-                designationTemp = JsonConvert.DeserializeObject<List<DesignationClass>>(result);
-                ViewData["designationtemp"] = designationTemp;
+                var client = new HttpClient();
+                client.BaseAddress = new Uri("https://localhost:7015");
+                List<DesignationClass>? designationTemp = new List<DesignationClass>();
+
+                HttpResponseMessage res = await client.GetAsync("api/Designation");
+
+                if (res.IsSuccessStatusCode)
+                {
+                    var result = res.Content.ReadAsStringAsync().Result;
+                    designationTemp = JsonConvert.DeserializeObject<List<DesignationClass>>(result);
+                    ViewData["designationtemp"] = designationTemp;
+                }
+                return View();
             }
-            return View();
+            return RedirectToAction("login");
+            
         }
         [HttpPost]
         public IActionResult create(ModelClass emp)
         {
-
-            var client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:7015");
-            
-            var postTask = client.PostAsJsonAsync<ModelClass>("api/Employee/create", emp);
-           
-            postTask.Wait();
-            var Result = postTask.Result;
-            if(Result.IsSuccessStatusCode)
+            if (HttpContext.Session.GetString("tokens") != null)
             {
-                return RedirectToAction("ViewEmployee");
+                var client = new HttpClient();
+                client.BaseAddress = new Uri("https://localhost:7015");
+
+                var postTask = client.PostAsJsonAsync<ModelClass>("api/Employee/create", emp);
+
+                postTask.Wait();
+                var Result = postTask.Result;
+                if (Result.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("ViewEmployee");
+                }
+                return View();
             }
-            return View();
+            return RedirectToAction("login");
+            
         }
         public async Task<IActionResult> Delete(string username)
         { 
@@ -85,9 +105,11 @@ namespace UIUXLayer.Controllers
             client.BaseAddress = new Uri("https://localhost:7015");
             var postTask = client.PostAsJsonAsync<UserLoginClass>("api/user/login", user);
             postTask.Wait();
+            
             var Result = postTask.Result;
             if (Result.IsSuccessStatusCode)
             {
+                HttpContext.Session.SetString("tokens", "token");
                 return RedirectToAction("DashBoard");
             }
             return View();
@@ -108,81 +130,121 @@ namespace UIUXLayer.Controllers
         }
         public ActionResult DashBoard()
         {
-            return View();
+            if (HttpContext.Session.GetString("tokens") != null)
+            {
+                return View();
+            }
+            return RedirectToAction("login");
         }
         public async Task<IActionResult> Update(string username)
         {
-            var client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:7015");
-            List<DesignationClass>? designationTemp = new List<DesignationClass>();
-
-            HttpResponseMessage des = await client.GetAsync("api/Designation");
-
-            if (des.IsSuccessStatusCode)
-            {
-                var result = des.Content.ReadAsStringAsync().Result;
-                designationTemp = JsonConvert.DeserializeObject<List<DesignationClass>>(result);
-                ViewData["designationtemp"] = designationTemp;
-            }
-           
-            TempModelClass employee = new TempModelClass();
-            HttpResponseMessage res = await client.GetAsync($"api/Employee/get/{username}");
-            if (res.IsSuccessStatusCode)
-            {
-                var result = res.Content.ReadAsStringAsync().Result;
-                employee = JsonConvert.DeserializeObject<TempModelClass>(result);
-            }
             
-            
-            return View(employee);
+            if (HttpContext.Session.GetString("tokens") != null)
+            {
+                var client = new HttpClient();
+                client.BaseAddress = new Uri("https://localhost:7015");
+                List<DesignationClass>? designationTemp = new List<DesignationClass>();
+
+                HttpResponseMessage des = await client.GetAsync("api/Designation");
+
+                if (des.IsSuccessStatusCode)
+                {
+                    var result = des.Content.ReadAsStringAsync().Result;
+                    designationTemp = JsonConvert.DeserializeObject<List<DesignationClass>>(result);
+                    ViewData["designationtemp"] = designationTemp;
+                }
+
+                TempModelClass employee = new TempModelClass();
+                HttpResponseMessage res = await client.GetAsync($"api/Employee/get/{username}");
+                if (res.IsSuccessStatusCode)
+                {
+                    var result = res.Content.ReadAsStringAsync().Result;
+                    employee = JsonConvert.DeserializeObject<TempModelClass>(result);
+                }
+
+
+                return View(employee);
+            }
+            return RedirectToAction("login");
         }
         [HttpPost]
-        public async Task<IActionResult> Update(TempModelClass temp)
+        public async Task<IActionResult> Update(ModelClass temp)
         {
-            var client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:7015");
-            var postTask = client.PostAsJsonAsync<TempModelClass>("api/Employee/Update", temp);
-            postTask.Wait();
-            var Result = postTask.Result;
-            if (Result.IsSuccessStatusCode)
+            if (HttpContext.Session.GetString("tokens") != null)
             {
-                return RedirectToAction("viewEmployee");
+
+                var client = new HttpClient();
+                client.BaseAddress = new Uri("https://localhost:7015");
+
+                List<DesignationClass>? designationTemp = new List<DesignationClass>();
+                HttpResponseMessage des = await client.GetAsync("api/Designation");
+
+                if (des.IsSuccessStatusCode)
+                {
+                    var result = des.Content.ReadAsStringAsync().Result;
+                    designationTemp = JsonConvert.DeserializeObject<List<DesignationClass>>(result);
+                    ViewData["designationtemp"] = designationTemp;
+                }
+
+                var postTask = client.PostAsJsonAsync<ModelClass>("api/Employee/Update", temp);
+                postTask.Wait();
+                var Result = postTask.Result;
+                if (Result.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("viewEmployee");
+                }
+                return View();
             }
-            return View();
+            return RedirectToAction("login");
+
         }
         public ActionResult designation()
         {
-            return View();
+            if (HttpContext.Session.GetString("tokens") != null)
+            {
+                return View();
+            }
+            return RedirectToAction("login");
         }
         [HttpPost]
         public async Task<IActionResult> designation(DesignationClass designationClass)
         {
-            var client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:7015");
-            var postTask = client.PostAsJsonAsync<DesignationClass>("api/Designation/designation", designationClass);
-
-          /*  var postTask = client.PostAsJsonAsync<DesignationClass>("api/Designation/Designation", designationClass)*/
-            postTask.Wait();
-            var Result = postTask.Result;
-            if (Result.IsSuccessStatusCode)
+            if (HttpContext.Session.GetString("tokens") != null)
             {
-                return RedirectToAction("DashBoard");
+                var client = new HttpClient();
+                client.BaseAddress = new Uri("https://localhost:7015");
+                var postTask = client.PostAsJsonAsync<DesignationClass>("api/Designation/designation", designationClass);
+
+                /*  var postTask = client.PostAsJsonAsync<DesignationClass>("api/Designation/Designation", designationClass)*/
+                postTask.Wait();
+                var Result = postTask.Result;
+                if (Result.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("DashBoard");
+                }
+                return View();
             }
-            return View();
+            return RedirectToAction("login");
+            
         }
         public async Task<IActionResult> ViewDesignation()
         {
-            var client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:7015");
-            List<ModelClass>? employee = new List<ModelClass>();
-
-            HttpResponseMessage res = await client.GetAsync("api/designation/get");
-            if (res.IsSuccessStatusCode)
+            if (HttpContext.Session.GetString("tokens") != null)
             {
-                var result = res.Content.ReadAsStringAsync().Result;
-                employee = JsonConvert.DeserializeObject<List<ModelClass>>(result);
+                var client = new HttpClient();
+                client.BaseAddress = new Uri("https://localhost:7015");
+                List<ModelClass>? employee = new List<ModelClass>();
+
+                HttpResponseMessage res = await client.GetAsync("api/designation");
+                if (res.IsSuccessStatusCode)
+                {
+                    var result = res.Content.ReadAsStringAsync().Result;
+                    employee = JsonConvert.DeserializeObject<List<ModelClass>>(result);
+                }
+                return View(employee);
             }
-            return View(employee);
+            return RedirectToAction("login");
+            
 
         }
 

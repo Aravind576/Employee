@@ -71,6 +71,7 @@
             <div class="form-group">
                 <label asp-for="country" class="control-label">Country</label>
                 <select asp-for="country" class="form-select">
+                    <option value="none" selected disabled hidden>Select an Option</option>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>
@@ -334,7 +335,7 @@
             <div class="form-group">
                 <label asp-for="designation" class="control-label">Designation</label>
                 <select asp-for="designation" class="form-select">
-
+                    <option value="none" selected disabled hidden>Select an Option</option>
                     @foreach (var item in ViewData["designationtemp"] as IList<DesignationClass>)
                     {
                                     <option value="@item.DesignationTypes">@item.DesignationTypes</option>
@@ -351,7 +352,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="ViewEmployee">Back to List</a>
 </div>
 
 @section Scripts {

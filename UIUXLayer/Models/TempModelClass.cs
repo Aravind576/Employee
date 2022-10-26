@@ -5,7 +5,6 @@ namespace UIUXLayer.Models
 {
     public class TempModelClass
     {
-
         [Required(ErrorMessage = "Title is  Required")]
         public string? title { get; set; }
 
@@ -60,5 +59,7 @@ namespace UIUXLayer.Models
         public string? designation { get; set; }
 
         public string? imagePath { get; set; }
+
+
     }
 }
