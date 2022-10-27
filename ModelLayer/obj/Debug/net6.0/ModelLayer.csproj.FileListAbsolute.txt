@@ -10,3 +10,15 @@ D:\MVC\MVC\EmployeeManagement\ModelLayer\obj\Debug\net6.0\ModelLayer.dll
 D:\MVC\MVC\EmployeeManagement\ModelLayer\obj\Debug\net6.0\refint\ModelLayer.dll
 D:\MVC\MVC\EmployeeManagement\ModelLayer\obj\Debug\net6.0\ModelLayer.pdb
 D:\MVC\MVC\EmployeeManagement\ModelLayer\obj\Debug\net6.0\ref\ModelLayer.dll
+D:\c#\MiniProject\Employee\ModelLayer\bin\Debug\net6.0\ModelLayer.deps.json
+D:\c#\MiniProject\Employee\ModelLayer\bin\Debug\net6.0\ModelLayer.dll
+D:\c#\MiniProject\Employee\ModelLayer\bin\Debug\net6.0\ModelLayer.pdb
+D:\c#\MiniProject\Employee\ModelLayer\obj\Debug\net6.0\ModelLayer.csproj.AssemblyReference.cache
+D:\c#\MiniProject\Employee\ModelLayer\obj\Debug\net6.0\ModelLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\c#\MiniProject\Employee\ModelLayer\obj\Debug\net6.0\ModelLayer.AssemblyInfoInputs.cache
+D:\c#\MiniProject\Employee\ModelLayer\obj\Debug\net6.0\ModelLayer.AssemblyInfo.cs
+D:\c#\MiniProject\Employee\ModelLayer\obj\Debug\net6.0\ModelLayer.csproj.CoreCompileInputs.cache
+D:\c#\MiniProject\Employee\ModelLayer\obj\Debug\net6.0\ModelLayer.dll
+D:\c#\MiniProject\Employee\ModelLayer\obj\Debug\net6.0\refint\ModelLayer.dll
+D:\c#\MiniProject\Employee\ModelLayer\obj\Debug\net6.0\ModelLayer.pdb
+D:\c#\MiniProject\Employee\ModelLayer\obj\Debug\net6.0\ref\ModelLayer.dll

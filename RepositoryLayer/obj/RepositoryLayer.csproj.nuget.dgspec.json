@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MVC\\MVC\\EmployeeManagement\\RepositoryLayer\\RepositoryLayer.csproj": {}
+    "D:\\c#\\MiniProject\\Employee\\RepositoryLayer\\RepositoryLayer.csproj": {}
   },
   "projects": {
-    "D:\\MVC\\MVC\\EmployeeManagement\\ModelLayer\\ModelLayer.csproj": {
+    "D:\\c#\\MiniProject\\Employee\\ModelLayer\\ModelLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MVC\\MVC\\EmployeeManagement\\ModelLayer\\ModelLayer.csproj",
+        "projectUniqueName": "D:\\c#\\MiniProject\\Employee\\ModelLayer\\ModelLayer.csproj",
         "projectName": "ModelLayer",
-        "projectPath": "D:\\MVC\\MVC\\EmployeeManagement\\ModelLayer\\ModelLayer.csproj",
-        "packagesPath": "C:\\Users\\anarayanan\\.nuget\\packages\\",
-        "outputPath": "D:\\MVC\\MVC\\EmployeeManagement\\ModelLayer\\obj\\",
+        "projectPath": "D:\\c#\\MiniProject\\Employee\\ModelLayer\\ModelLayer.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "D:\\c#\\MiniProject\\Employee\\ModelLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\anarayanan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,17 +65,17 @@
         }
       }
     },
-    "D:\\MVC\\MVC\\EmployeeManagement\\RepositoryLayer\\RepositoryLayer.csproj": {
+    "D:\\c#\\MiniProject\\Employee\\RepositoryLayer\\RepositoryLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MVC\\MVC\\EmployeeManagement\\RepositoryLayer\\RepositoryLayer.csproj",
+        "projectUniqueName": "D:\\c#\\MiniProject\\Employee\\RepositoryLayer\\RepositoryLayer.csproj",
         "projectName": "RepositoryLayer",
-        "projectPath": "D:\\MVC\\MVC\\EmployeeManagement\\RepositoryLayer\\RepositoryLayer.csproj",
-        "packagesPath": "C:\\Users\\anarayanan\\.nuget\\packages\\",
-        "outputPath": "D:\\MVC\\MVC\\EmployeeManagement\\RepositoryLayer\\obj\\",
+        "projectPath": "D:\\c#\\MiniProject\\Employee\\RepositoryLayer\\RepositoryLayer.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "D:\\c#\\MiniProject\\Employee\\RepositoryLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\anarayanan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -89,8 +89,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\MVC\\MVC\\EmployeeManagement\\ModelLayer\\ModelLayer.csproj": {
-                "projectPath": "D:\\MVC\\MVC\\EmployeeManagement\\ModelLayer\\ModelLayer.csproj"
+              "D:\\c#\\MiniProject\\Employee\\ModelLayer\\ModelLayer.csproj": {
+                "projectPath": "D:\\c#\\MiniProject\\Employee\\ModelLayer\\ModelLayer.csproj"
               }
             }
           }

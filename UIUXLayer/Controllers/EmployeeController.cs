@@ -9,7 +9,7 @@ namespace UIUXLayer.Controllers
         
         public async Task<IActionResult> viewEmployee()
         {
-            if (HttpContext.Session.GetString("tokens") != null)
+            if (HttpContext.Session.GetString("tokens") == null)
             {
                 var client = new HttpClient();
                 client.BaseAddress = new Uri("https://localhost:7015");

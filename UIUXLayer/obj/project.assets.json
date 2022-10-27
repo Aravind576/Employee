@@ -8938,19 +8938,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\anarayanan\\.nuget\\packages\\": {}
+    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MVC\\MVC\\EmployeeManagement\\UIUXLayer\\UIUXLayer.csproj",
+      "projectUniqueName": "D:\\c#\\MiniProject\\Employee\\UIUXLayer\\UIUXLayer.csproj",
       "projectName": "UIUXLayer",
-      "projectPath": "D:\\MVC\\MVC\\EmployeeManagement\\UIUXLayer\\UIUXLayer.csproj",
-      "packagesPath": "C:\\Users\\anarayanan\\.nuget\\packages\\",
-      "outputPath": "D:\\MVC\\MVC\\EmployeeManagement\\UIUXLayer\\obj\\",
+      "projectPath": "D:\\c#\\MiniProject\\Employee\\UIUXLayer\\UIUXLayer.csproj",
+      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+      "outputPath": "D:\\c#\\MiniProject\\Employee\\UIUXLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\anarayanan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

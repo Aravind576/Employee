@@ -508,8 +508,14 @@
           }
         }
       },
+      "AssetsLibrary/1.0.0": {
+        "runtime": {
+          "AssetsLibrary.dll": {}
+        }
+      },
       "BussinessLayer/1.0.0": {
         "dependencies": {
+          "AssetsLibrary": "1.0.0",
           "ModelLayer": "1.0.0",
           "RepositoryLayer": "1.0.0"
         },
@@ -907,6 +913,11 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "AssetsLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "BussinessLayer/1.0.0": {
       "type": "project",

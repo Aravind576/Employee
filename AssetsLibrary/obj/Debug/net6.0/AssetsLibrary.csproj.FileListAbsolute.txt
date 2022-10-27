@@ -1,0 +1,12 @@
+D:\c#\MiniProject\Employee\AssetsLibrary\bin\Debug\net6.0\AssetsLibrary.deps.json
+D:\c#\MiniProject\Employee\AssetsLibrary\bin\Debug\net6.0\AssetsLibrary.dll
+D:\c#\MiniProject\Employee\AssetsLibrary\bin\Debug\net6.0\AssetsLibrary.pdb
+D:\c#\MiniProject\Employee\AssetsLibrary\obj\Debug\net6.0\AssetsLibrary.csproj.AssemblyReference.cache
+D:\c#\MiniProject\Employee\AssetsLibrary\obj\Debug\net6.0\AssetsLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\c#\MiniProject\Employee\AssetsLibrary\obj\Debug\net6.0\AssetsLibrary.AssemblyInfoInputs.cache
+D:\c#\MiniProject\Employee\AssetsLibrary\obj\Debug\net6.0\AssetsLibrary.AssemblyInfo.cs
+D:\c#\MiniProject\Employee\AssetsLibrary\obj\Debug\net6.0\AssetsLibrary.csproj.CoreCompileInputs.cache
+D:\c#\MiniProject\Employee\AssetsLibrary\obj\Debug\net6.0\AssetsLibrary.dll
+D:\c#\MiniProject\Employee\AssetsLibrary\obj\Debug\net6.0\refint\AssetsLibrary.dll
+D:\c#\MiniProject\Employee\AssetsLibrary\obj\Debug\net6.0\AssetsLibrary.pdb
+D:\c#\MiniProject\Employee\AssetsLibrary\obj\Debug\net6.0\ref\AssetsLibrary.dll

@@ -919,10 +919,21 @@
           }
         }
       },
+      "AssetsLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/AssetsLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AssetsLibrary.dll": {}
+        }
+      },
       "BussinessLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "AssetsLibrary": "1.0.0",
           "ModelLayer": "1.0.0",
           "RepositoryLayer": "1.0.0"
         },
@@ -2380,6 +2391,11 @@
         "version.txt"
       ]
     },
+    "AssetsLibrary/1.0.0": {
+      "type": "project",
+      "path": "../AssetsLibrary/AssetsLibrary.csproj",
+      "msbuildProject": "../AssetsLibrary/AssetsLibrary.csproj"
+    },
     "BussinessLayer/1.0.0": {
       "type": "project",
       "path": "../BussinessLayer/BussinessLayer.csproj",
@@ -2408,19 +2424,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\anarayanan\\.nuget\\packages\\": {}
+    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MVC\\MVC\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.csproj",
+      "projectUniqueName": "D:\\c#\\MiniProject\\Employee\\EmployeeManagement\\EmployeeManagement.csproj",
       "projectName": "EmployeeManagement",
-      "projectPath": "D:\\MVC\\MVC\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.csproj",
-      "packagesPath": "C:\\Users\\anarayanan\\.nuget\\packages\\",
-      "outputPath": "D:\\MVC\\MVC\\EmployeeManagement\\EmployeeManagement\\obj\\",
+      "projectPath": "D:\\c#\\MiniProject\\Employee\\EmployeeManagement\\EmployeeManagement.csproj",
+      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+      "outputPath": "D:\\c#\\MiniProject\\Employee\\EmployeeManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\anarayanan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2434,8 +2450,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\MVC\\MVC\\EmployeeManagement\\BussinessLayer\\BussinessLayer.csproj": {
-              "projectPath": "D:\\MVC\\MVC\\EmployeeManagement\\BussinessLayer\\BussinessLayer.csproj"
+            "D:\\c#\\MiniProject\\Employee\\BussinessLayer\\BussinessLayer.csproj": {
+              "projectPath": "D:\\c#\\MiniProject\\Employee\\BussinessLayer\\BussinessLayer.csproj"
             }
           }
         }
