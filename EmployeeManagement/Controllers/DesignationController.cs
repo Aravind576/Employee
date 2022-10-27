@@ -15,7 +15,7 @@ namespace EmployeeManagement.Controllers
     
     public class DesignationController : ControllerBase
     {
-        private readonly EmployeeContext _employeeContext;
+        private readonly EmployeeContext _employeeContext; 
         
         public DesignationController(EmployeeContext employeeContext)
         {

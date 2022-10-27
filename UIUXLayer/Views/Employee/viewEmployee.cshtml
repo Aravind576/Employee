@@ -46,9 +46,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.designation)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.imagePath)
-            </th>
+            
             <th></th>
         </tr>
     </thead>
@@ -89,9 +87,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.designation)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.imagePath)
-            </td>
+            
             <td>
                 @Html.ActionLink("Edit", "Update", new { username=item.username }) |
                     @Html.ActionLink("Details", "Details", new { username=item.username  }) |

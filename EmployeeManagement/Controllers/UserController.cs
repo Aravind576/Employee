@@ -4,6 +4,9 @@ using ModelLayer;
 using RepositoryLayer;
 using System.Security.Cryptography;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace EmployeeManagement.Controllers
 {
@@ -12,9 +15,11 @@ namespace EmployeeManagement.Controllers
     public class UserController : ControllerBase
     {
         private readonly EmployeeContext _employeeContext;
-        public UserController(EmployeeContext employeeContext)
+        private IConfiguration _configuration;
+        public UserController(EmployeeContext employeeContext,IConfiguration iconfiguration)
         {
                 _employeeContext = employeeContext;
+            _configuration = iconfiguration;
         }
         [HttpPost("register")]
         public async Task<IActionResult> Register(AccountRegister request)
@@ -58,10 +63,12 @@ namespace EmployeeManagement.Controllers
                 return BadRequest("Password is Incorrect");
             }
 
-            
 
 
-            return Ok($"Welcome, {user.UserName}!:)");
+
+            string token = CreateToken(user);
+
+            return Ok(token);
 
 
         }
@@ -91,6 +98,28 @@ namespace EmployeeManagement.Controllers
                 return computedHash.SequenceEqual(passwordHash);
 
             }
+        }
+        private string CreateToken(AccountDetails user)
+        {
+            List<Claim> claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(ClaimTypes.Role, "Admin")
+            };
+
+            var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(
+                _configuration.GetSection("AppSettings:Token").Value));
+
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+
+            var token = new JwtSecurityToken(
+                claims: claims,
+                expires: DateTime.Now.AddDays(1),
+                signingCredentials: creds);
+
+            var jwt = new JwtSecurityTokenHandler().WriteToken(token);
+
+            return jwt;
         }
 
     }

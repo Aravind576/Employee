@@ -98,7 +98,6 @@ namespace UIUXLayer.Controllers
             return RedirectToAction("ViewEmployee");
             
         }
-        
         public IActionResult Login(UserLoginClass user)
         {
             var client = new HttpClient();
@@ -114,7 +113,6 @@ namespace UIUXLayer.Controllers
             }
             return View();
         }
-        
         public IActionResult Register(UserRegister user)
         {
             var client = new HttpClient();
@@ -247,7 +245,14 @@ namespace UIUXLayer.Controllers
             
 
         }
-
+        public ActionResult logout()
+        {
+            HttpContext.Session.Clear();
+            HttpContext.Session.Clear();
+               
+            
+            return RedirectToAction("login");
+        }
 
     }
 }
