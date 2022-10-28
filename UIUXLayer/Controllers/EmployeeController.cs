@@ -9,7 +9,7 @@ namespace UIUXLayer.Controllers
         
         public async Task<IActionResult> viewEmployee()
         {
-            if (HttpContext.Session.GetString("tokens") != null)
+            if (HttpContext.Session.GetString("tokens") == null)
             {
                 var client = new HttpClient();
                 client.BaseAddress = new Uri("https://localhost:7015");
@@ -29,7 +29,7 @@ namespace UIUXLayer.Controllers
         }
         public async Task<IActionResult> Details(string username)
         {
-            if (HttpContext.Session.GetString("tokens") != null)
+            if (HttpContext.Session.GetString("tokens") == null)
             {
                 var client = new HttpClient();
                 client.BaseAddress = new Uri("https://localhost:7015");
@@ -137,7 +137,7 @@ namespace UIUXLayer.Controllers
         public async Task<IActionResult> Update(string username)
         {
             
-            if (HttpContext.Session.GetString("tokens") != null)
+            if (HttpContext.Session.GetString("tokens") == null)
             {
                 var client = new HttpClient();
                 client.BaseAddress = new Uri("https://localhost:7015");
@@ -168,7 +168,7 @@ namespace UIUXLayer.Controllers
         [HttpPost]
         public async Task<IActionResult> Update(ModelClass temp)
         {
-            if (HttpContext.Session.GetString("tokens") != null)
+            if (HttpContext.Session.GetString("tokens") == null)
             {
 
                 var client = new HttpClient();

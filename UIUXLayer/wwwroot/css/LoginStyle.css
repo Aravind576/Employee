@@ -1,0 +1,14 @@
+﻿body {
+}
+.LoginContainer {
+    border: black solid 1px;
+    position: absolute;
+    left: 45%;
+    top: 35%;
+    background-color:aquamarine;
+    border-radius: 0 20px 0 20px;
+}
+.wrapper {
+    padding: 25px;
+    width: 250px;
+}

@@ -15,6 +15,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\MVC\MVC\EmployeeManagement\UIUXLayer
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/MVC/MVC/EmployeeManagement/UIUXLayer/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MVC/MVC/EmployeeManagement/UIUXLayer/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MVC/MVC/EmployeeManagement/UIUXLayer/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MVC/MVC/EmployeeManagement/UIUXLayer/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MVC/MVC/EmployeeManagement/UIUXLayer/Views/Employee/.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/MVC/MVC/EmployeeManagement/UIUXLayer/Views/Employee/create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcY3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -49,6 +69,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/MVC/MVC/EmployeeManagement/UIUXLayer/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MVC/MVC/EmployeeManagement/UIUXLayer/Views/Shared/_LayoutLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MVC/MVC/EmployeeManagement/UIUXLayer/Views/Shared/_LayoutView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/MVC/MVC/EmployeeManagement/UIUXLayer/Views/Shared/_ValidationScriptsPartial.cshtml]

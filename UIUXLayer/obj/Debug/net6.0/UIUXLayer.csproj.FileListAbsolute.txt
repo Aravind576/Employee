@@ -239,3 +239,4 @@ D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\refint\UIUXLayer.dll
 D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\UIUXLayer.pdb
 D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\UIUXLayer.genruntimeconfig.cache
 D:\MVC\MVC\EmployeeManagement\UIUXLayer\obj\Debug\net6.0\ref\UIUXLayer.dll
+D:\MVC\MVC\EmployeeManagement\UIUXLayer\bin\Debug\net6.0\bundleconfig.json
