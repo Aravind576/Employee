@@ -1,21 +1,181 @@
 ﻿@model IEnumerable<UIUXLayer.Models.ModelClass>
+@{
+    
+    Layout = "~/Views/Shared/_LayoutView.cshtml";
+}
 <link rel="stylesheet" href="~/css/viewemployee.css" />
-    <div class=" =wrapper">
-        
-        <div class="EmployeeContainer">
-            @foreach (var item in Model) {
-                <div class="PaddingClass">
-                    <div class="IndivitualEmployee">
-                        <div class="ImageClass">
-                            <img class="ProfilePhoto" src="../WIN_20220109_20_20_01_Pro.jpg" alt="Sorry no image found"/>
-                        </div>
-                    <div class="DetailsClass">
-                        <div class="NameClass"><b>@Html.DisplayFor(modelItem => item.firstName) @Html.DisplayFor(modelItem => item.lastName)</b></div>
-                        <h6>@Html.DisplayFor(modelItem => item.username)</h6>
-                            <h4>@Html.DisplayNameFor(Model=>Model.Salary) :@Html.DisplayFor(modelItem => item.Salary)</h4>
-                    </div>
-                </div>
-            </div>
-            }
-        </div>
+@*<script src="~/js/ViewEmployee"></script>*@
+<script >
+    function myfunction() {
+        console.log("hit")
+        var checkBox = document.getElementById("flexSwitchCheckDefault");
+        var stacked = document.getElementById("TableClass");
+        var table = document.getElementById("Wrapper");
+
+        if (checkBox.checked == true) {
+            stacked.style.display = "block";
+            table.style.display = "none";
+        }
+        else {
+
+            stacked.style.display = "none";
+            table.style.display = "block";
+        }
+
+    }
+</script>
+
+<div class=" form-switch" style="padding-left:20px">
+    <div class="switch" style="display:flex;">
+        <label style="width:40px" >Table</label><span style="width:32px;"> <input  class="form-check-input" style="margin-left:0px;" type="checkbox"  id="flexSwitchCheckDefault" onclick="myfunction()" /></span><label style="width:fit-content">Stacked</label>
     </div>
+    </div>
+@using (Html.BeginForm("Details", "Employee"))
+{
+        <input type="text"  name="username"/>
+        <input type="submit" value="search" />
+}
+@using (Html.BeginForm("viewEmployee", "Employee"))
+{
+                <input type="radio" value="ascend" name="ascend" />
+                        <input type="radio" value="descend" name="ascend" />
+            <input type="submit" value="search" />
+}
+<div id="Wrapper" class="wrapper">
+
+
+
+    <div class="EmployeeContainer">
+        @foreach (var item in Model)
+        {
+                        <div class="PaddingClass">
+                            <div class="IndivitualEmployee">
+                                <div class="ImageClass">
+                                    <img class="ProfilePhoto" src="../WIN_20220109_20_20_01_Pro.jpg" alt="Sorry no image found" />
+                                </div>
+                                <div class="DetailsClass">
+                                    <div class="NameClass">
+                                        <a asp-controller="Employee" asp-action="Details" asp-route-username="@item.username">@Html.DisplayFor(modelItem => item.firstName) @Html.DisplayFor(modelItem => item.lastName)</a>
+                                    </div>
+                                    <div class="ContactDetails">
+                                        <h5 class="ContactDisplay">@Html.DisplayFor(modelItem => item.address),@Html.DisplayFor(modelItem => item.country)</h5>
+                                        <h5 class="ContactDisplay">@Html.DisplayFor(modelItem => item.emailId)</h5>
+                                        <h5 class="ContactDisplay">@Html.DisplayFor(modelItem => item.mobile)</h5>
+                                    </div>
+                                    <div class="TypeClass">
+                                        <b class="ContactDisplay"><TempHeading class="TitleClass">@Html.DisplayNameFor(Model=>Model.gender)</TempHeading></b>
+                                        <b class="ContactDisplay"><TempHeading class="TitleClass">@Html.DisplayNameFor(Model=>Model.designation)</TempHeading></b>
+                                        <b class="ContactDisplay"><TempHeading class="TitleClass">@Html.DisplayNameFor(Model=>Model.Salary)</TempHeading></b>
+                                    </div>
+                                    <div class="ContactDetails">
+                                        <h4 class="ContactDisplay">@Html.DisplayFor(modelItem => item.gender)</h4>
+                                        <h4 class="ContactDisplay">@Html.DisplayFor(modelItem => item.designation)</h4>
+                                        <h4 class="ContactDisplay">@Html.DisplayFor(modelItem => item.Salary)</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+        }
+
+    </div>
+</div>
+<div class="TableClass" id="TableClass">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.firstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.lastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.gender)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.username)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.password)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.emailId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.mobile)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.address)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.country)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Salary)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.designation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.imagePath)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                            <tr>
+                                <td>
+                        @Html.DisplayFor(modelItem => item.title)
+                                </td>
+                                <td>
+                        @Html.DisplayFor(modelItem => item.firstName)
+                                </td>
+                                <td>
+                        @Html.DisplayFor(modelItem => item.lastName)
+                                </td>
+                                <td>
+                        @Html.DisplayFor(modelItem => item.gender)
+                                </td>
+                                <td>
+                        @Html.DisplayFor(modelItem => item.username)
+                                </td>
+                                <td>
+                        @Html.DisplayFor(modelItem => item.password)
+                                </td>
+                                <td>
+                        @Html.DisplayFor(modelItem => item.emailId)
+                                </td>
+                                <td>
+                        @Html.DisplayFor(modelItem => item.mobile)
+                                </td>
+                                <td>
+                        @Html.DisplayFor(modelItem => item.address)
+                                </td>
+                                <td>
+                        @Html.DisplayFor(modelItem => item.country)
+                                </td>
+                                <td>
+                        @Html.DisplayFor(modelItem => item.Salary)
+                                </td>
+                                <td>
+                        @Html.DisplayFor(modelItem => item.designation)
+                                </td>
+                                <td>
+                        @Html.DisplayFor(modelItem => item.imagePath)
+                                </td>
+                                <td>
+                        @Html.ActionLink("Edit", "Edit", new { username=item.username }) |
+                        @Html.ActionLink("Details", "Details", new { username=item.username }) |
+                        @Html.ActionLink("Delete", "Delete", new { username=item.username  })
+                                </td>
+                            </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qf1sztcwSnV1iU1+AUt7q+b94IrJL4z9DQh6lSPzOAs=",
+  "Hash": "9UPJY+f5T3ugN98exY45tEbTSwuus/yiB2ie3tbj9Ok=",
   "Source": "UIUXLayer",
   "BasePath": "_content/UIUXLayer",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\c#\\MiniProject\\Employee\\UIUXLayer\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\UIUXLayer.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\c#\\MiniProject\\Employee\\UIUXLayer\\wwwroot\\css\\LoginStyle.css",
+      "SourceId": "UIUXLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\c#\\MiniProject\\Employee\\UIUXLayer\\wwwroot\\",
+      "BasePath": "_content/UIUXLayer",
+      "RelativePath": "css/LoginStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\LoginStyle.css"
     },
     {
       "Identity": "D:\\c#\\MiniProject\\Employee\\UIUXLayer\\wwwroot\\css\\site.css",

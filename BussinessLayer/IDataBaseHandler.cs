@@ -9,6 +9,8 @@ namespace BussinessLayer
 {
     public interface IDataBaseHandler
     {
+        List<EmployeeDetail> GetByOrder();
+        List<EmployeeDetail> GetByOrderDesc();
         List<EmployeeDetail> Get();
         EmployeeDetail Get(String username);
         void delete(String username);

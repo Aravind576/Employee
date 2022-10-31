@@ -1,33 +1,63 @@
-﻿body {
+﻿﻿﻿body {
 }
-.EmployeeContainer{
-    display:flex;
-    
+
+.EmployeeContainer {
+    display: flex;
+    flex-wrap: wrap;
 }
+
 .IndivitualEmployee {
-    
-    width: 600px;
+    width: 90%;
     height: 150px;
     display: flex;
-    background-color: #90f2f8;
-    
-    
+    border: black solid 1px;
+    border-radius: 20px 20px 20px 20px;
 }
-.ImageClass{
-    width:150px;
-    height:100%;
-    background-color:blue;
-}
-.NameClass{
-    font-size:30px;
 
+.ImageClass {
+    width: 150px;
+    height: 100%;
+    background-color: blue;
+    border-radius: 20px 0px 0px 20px;
 }
+
+.NameClass {
+    font-size: 40px;
+    border-bottom: black solid 1px;
+}
+
 .PaddingClass {
     position: relative;
     left: 100px;
-    width: fit-content;
-    padding: 25px;
+    width: 100%;
+    padding-bottom: 10px;
 }
-h6{
-    font-size:15px;
+
+.TitleClass {
+    font-size: 13px;
+    margin-bottom: 0px;
+}
+
+.DetailsClass {
+    width: 100%;
+    background-color: #b3ffb3;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.ContactDetails {
+    width: 100%;
+    display: flex;
+}
+
+.ContactDisplay {
+    flex: 1;
+}
+
+.TypeClass {
+    width: 100%;
+    display: flex;
+}
+
+.TableClass {
+    display: none;
 }

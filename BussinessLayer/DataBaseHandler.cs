@@ -21,12 +21,19 @@ namespace BussinessLayer
         {
             return _employeeContext.employee.FirstOrDefault(i => i.username==username);
         }
-
+        
         public List<EmployeeDetail> Get()
         {
             return _employeeContext.employee.ToList();
         }
-
+        public List<EmployeeDetail> GetByOrder()
+        {
+            return _employeeContext.employee.OrderBy(s => s.Salary).ToList();
+        }
+        public List<EmployeeDetail> GetByOrderDesc()
+        {
+            return _employeeContext.employee.OrderByDescending(s => s.Salary).ToList();
+        }
         public void delete(string username)
         {
             EmployeeDetail emp= _employeeContext.employee.FirstOrDefault(i =>i.username==username);
