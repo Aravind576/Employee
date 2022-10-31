@@ -7,29 +7,56 @@ namespace UIUXLayer.Controllers
     public class EmployeeController : Controller
     {
         
-        public async Task<IActionResult> viewEmployee()
+        public async Task<IActionResult> viewEmployee(string? ascend)
         {
-            if (HttpContext.Session.GetString("tokens") == null)
+            if (HttpContext.Session.GetString("tokens") != null)
             {
                 var client = new HttpClient();
                 client.BaseAddress = new Uri("https://localhost:7015");
-                List<ModelClass>? employee = new List<ModelClass>();
-
-                HttpResponseMessage res = await client.GetAsync("api/Employee");
-                if (res.IsSuccessStatusCode)
+                if (ascend == "ascend")
                 {
-                    var result = res.Content.ReadAsStringAsync().Result;
-                    employee = JsonConvert.DeserializeObject<List<ModelClass>>(result);
+                    List<ModelClass>? employee = new List<ModelClass>();
+
+                    HttpResponseMessage res = await client.GetAsync("api/Employee/OrderByAscend");
+                    if (res.IsSuccessStatusCode)
+                    {
+                        var result = res.Content.ReadAsStringAsync().Result;
+                        employee = JsonConvert.DeserializeObject<List<ModelClass>>(result);
+                    }
+                    return View(employee);
                 }
-                return View(employee);
+                else if (ascend == "descend")
+                {
+                    List<ModelClass>? employee = new List<ModelClass>();
+
+                    HttpResponseMessage res = await client.GetAsync("api/Employee/OrderBy");
+                    if (res.IsSuccessStatusCode)
+                    {
+                        var result = res.Content.ReadAsStringAsync().Result;
+                        employee = JsonConvert.DeserializeObject<List<ModelClass>>(result);
+                    }
+                    return View(employee);
+                }
+                else
+                {
+                    List<ModelClass>? employee = new List<ModelClass>();
+
+                    HttpResponseMessage res = await client.GetAsync("api/Employee");
+                    if (res.IsSuccessStatusCode)
+                    {
+                        var result = res.Content.ReadAsStringAsync().Result;
+                        employee = JsonConvert.DeserializeObject<List<ModelClass>>(result);
+                    }
+                    return View(employee);
+                }
+
             }
             return RedirectToAction("login");
-           
 
         }
         public async Task<IActionResult> Details(string username)
         {
-            if (HttpContext.Session.GetString("tokens") == null)
+            if (HttpContext.Session.GetString("tokens") != null)
             {
                 var client = new HttpClient();
                 client.BaseAddress = new Uri("https://localhost:7015");
@@ -137,7 +164,7 @@ namespace UIUXLayer.Controllers
         public async Task<IActionResult> Update(string username)
         {
             
-            if (HttpContext.Session.GetString("tokens") == null)
+            if (HttpContext.Session.GetString("tokens") != null)
             {
                 var client = new HttpClient();
                 client.BaseAddress = new Uri("https://localhost:7015");
@@ -168,7 +195,7 @@ namespace UIUXLayer.Controllers
         [HttpPost]
         public async Task<IActionResult> Update(ModelClass temp)
         {
-            if (HttpContext.Session.GetString("tokens") == null)
+            if (HttpContext.Session.GetString("tokens") != null)
             {
 
                 var client = new HttpClient();

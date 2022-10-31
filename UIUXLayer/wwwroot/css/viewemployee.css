@@ -34,7 +34,7 @@
 }
 .TitleClass {
     font-size: 13px;
-    margin-bottomm: 0px;
+    margin-bottom: 0px;
 }
 .DetailsClass {
     width: 100%;
@@ -54,4 +54,7 @@
 }
 .TableClass{
     display:none ;
+}
+.upperNavBar {
+    display: flex;
 }

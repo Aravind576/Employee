@@ -1,28 +1,55 @@
 ﻿@model IEnumerable<UIUXLayer.Models.ModelClass>
+@{
+
+    Layout = "~/Views/Shared/_LayoutView.cshtml";
+}
 <link rel="stylesheet" href="~/css/viewemployee.css" />
 @*<script src="~/js/ViewEmployee"></script>*@
 <script>
-    function myFunction() {
+    function myfunction() {
+        console.log("hit")
         var checkBox = document.getElementById("flexSwitchCheckDefault");
-        var text = document.getElementById("TableClass");
-        var uppends = document.getElementById("UpendClass");
+        var stacked = document.getElementById("TableClass");
+        var table = document.getElementById("Wrapper");
         if (checkBox.checked == true) {
-            text.style.display = "block";
+            stacked.style.display = "block";
+            table.style.display = "none";
         }
         else {
-            text.style.display = "none";
+            stacked.style.display = "none";
+            table.style.display = "block";
         }
-        uppends.appendChild("text");
     }
 </script>
-<div id="UpendClass">
-<div class=" =wrapper">
-    
-    <div class="form-check form-switch">
-        <p>Table</p> <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onclick="myfunction()" /><p>Stacked</p>
-        
+<div class="upperNavBar" style="display:flex;">
+    <div class=" form-switch" style="padding-left:20px;flex:1">
+        <div class="switch" style="display:flex;">
+            <label style="width:40px">Table</label><span style="width:32px;"> <input class="form-check-input" style="margin-left:0px;" type="checkbox" id="flexSwitchCheckDefault" onclick="myfunction()" /></span><label style="width:fit-content">Stacked</label>
+        </div>
     </div>
+    <div class="filterClass" style="display:flex;flex:0.75">
+        <div class="filterClass" style="flex:1">
+    @using (Html.BeginForm("Details", "Employee"))
+    {
+        <input type="text" name="username" />
+        <input type="submit" value="search" />
+    }
+    </div>
+        <div class="filterClass" style="flex:1">
+    @using (Html.BeginForm("viewEmployee", "Employee"))
+    {
+        <input type="radio" value="ascend" name="ascend" onchange='this.form.submit();' />
+        <input type="radio" value="descend" name="ascend" onchange='this.form.submit();' />
+        
     
+    }
+        </div>
+        </div>
+    </div>
+<div id="Wrapper" class="wrapper">
+
+
+
     <div class="EmployeeContainer">
         @foreach (var item in Model)
         {
@@ -55,7 +82,7 @@
             </div>
 
         }
-       
+
     </div>
 </div>
 <div class="TableClass" id="TableClass">
@@ -148,7 +175,7 @@
                         @Html.DisplayFor(modelItem => item.imagePath)
                     </td>
                     <td>
-                        @Html.ActionLink("Edit", "Edit", new { username=item.username }) |
+                        @Html.ActionLink("Edit", "update", new { username=item.username }) |
                         @Html.ActionLink("Details", "Details", new { username=item.username }) |
                         @Html.ActionLink("Delete", "Delete", new { username=item.username  })
                     </td>
@@ -156,5 +183,4 @@
             }
         </tbody>
     </table>
-</div>
 </div>

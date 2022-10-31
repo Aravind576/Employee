@@ -21,6 +21,18 @@ namespace EmployeeManagement.Controllers
             return _dataBaseHandler.Get();
         }
         [HttpGet]
+        [Route("OrderByAscend")]
+        public ActionResult<List<EmployeeDetail>> OrderByAscend()
+        {
+            return _dataBaseHandler.GetByOrder();
+        }
+        [HttpGet]
+        [Route("OrderBy")]
+        public ActionResult<List<EmployeeDetail>> OrderByDesc()
+        {
+            return _dataBaseHandler.GetByOrderDesc();
+        }
+        [HttpGet]
         [Route("get/{username}")]
         public ActionResult<EmployeeDetail> Get(string username)
         {
