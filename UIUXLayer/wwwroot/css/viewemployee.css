@@ -16,11 +16,14 @@
 
 .ImageClass {
     width: 150px;
-    height: 100%;
-    background-color: blue;
+    height: 150px;
+    
     border-radius: 20px 0px 0px 20px;
 }
+.ProfilePhoto {
+   border-radius: 0 20px 0 20px;
 
+}
 .NameClass {
     font-size: 40px;
     border-bottom:black solid 1px;
@@ -38,7 +41,7 @@
 }
 .DetailsClass {
     width: 100%;
-    background-color: #b3ffb3;
+    
     border-radius: 0px 20px 20px 0px;
 }
 .ContactDetails {

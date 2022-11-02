@@ -97,13 +97,33 @@ namespace UIUXLayer.Controllers
             
         }
         [HttpPost]
-        public IActionResult create(ModelClass emp)
+        public async Task<IActionResult> create(ModelClass emp)
         {
             if (HttpContext.Session.GetString("tokens") != null)
             {
+
+                
+                byte[] bytes = null;
+                using (Stream fs = emp.imageUpload.OpenReadStream())
+                {
+                    using(BinaryReader br = new BinaryReader(fs))
+                    {
+                        bytes = br.ReadBytes((Int32)fs.Length);
+                    }
+                }
+                emp.imagePath = Convert.ToBase64String(bytes, 0, bytes.Length);
                 var client = new HttpClient();
                 client.BaseAddress = new Uri("https://localhost:7015");
+                List<DesignationClass>? designationTemp = new List<DesignationClass>();
 
+                HttpResponseMessage res = await client.GetAsync("api/Designation");
+
+                if (res.IsSuccessStatusCode)
+                {
+                    var result = res.Content.ReadAsStringAsync().Result;
+                    designationTemp = JsonConvert.DeserializeObject<List<DesignationClass>>(result);
+                    ViewData["designationtemp"] = designationTemp;
+                }
                 var postTask = client.PostAsJsonAsync<ModelClass>("api/Employee/create", emp);
 
                 postTask.Wait();
@@ -179,12 +199,12 @@ namespace UIUXLayer.Controllers
                     ViewData["designationtemp"] = designationTemp;
                 }
 
-                TempModelClass employee = new TempModelClass();
+                ModelClass employee = new ModelClass();
                 HttpResponseMessage res = await client.GetAsync($"api/Employee/get/{username}");
                 if (res.IsSuccessStatusCode)
                 {
                     var result = res.Content.ReadAsStringAsync().Result;
-                    employee = JsonConvert.DeserializeObject<TempModelClass>(result);
+                    employee = JsonConvert.DeserializeObject<ModelClass>(result);
                 }
 
 

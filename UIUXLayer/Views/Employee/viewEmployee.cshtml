@@ -56,7 +56,7 @@
             <div class="PaddingClass">
                 <div class="IndivitualEmployee">
                     <div class="ImageClass">
-                        <img class="ProfilePhoto" src="../WIN_20220109_20_20_01_Pro.jpg" alt="Sorry no image found" />
+                        <img class="ProfilePhoto" src="data:image/jpg;base64,@item.imagePath" width="150" height="150" alt="Sorry no image found" />
                     </div>
                     <div class="DetailsClass">
                         <div class="NameClass">
@@ -128,7 +128,7 @@
                 <th>
                     @Html.DisplayNameFor(model => model.imagePath)
                 </th>
-                <th></th>
+                
             </tr>
         </thead>
         <tbody>
@@ -171,9 +171,9 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.designation)
                     </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.imagePath)
-                    </td>
+                    <th>
+                        <img class="ProfilePhoto" src="data:image/jpg;base64,@item.imagePath" width="65" height="65" alt="Sorry no image found" />
+                    </th>
                     <td>
                         @Html.ActionLink("Edit", "update", new { username=item.username }) |
                         @Html.ActionLink("Details", "Details", new { username=item.username }) |

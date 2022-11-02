@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace UIUXLayer.Models
 {
@@ -58,7 +59,7 @@ namespace UIUXLayer.Models
         public string? designation { get; set; }
 
         public string? imagePath { get; set; }
-        
-        
+        [NotMapped]
+        public IFormFile? imageUpload { get; set; }
     }
 }
